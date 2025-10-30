@@ -4,11 +4,11 @@ import WeatherData from "./WeatherData";
 const API_KEY = "7e12feb07232d4a50245bf4f2d33714e";
 
 const bgType = {
-  Clouds: "/images/cloudy2.jpg",
-  Rain: "/images/rain.webp",
-  Clear: "/images/clear.jpg",
-  Snow: "/images/snow.jpg",
-  Default: "/images/default.png",
+  Clouds: "./images/cloudy2.jpg",
+  Rain: "./images/rain.webp",
+  Clear: "./images/clear.jpg",
+  Snow: "./images/snow.jpg",
+  Default: "./images/default.png",
 };
 const App = () => {
   const [city, setCity] = useState("");
