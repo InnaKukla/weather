@@ -19,7 +19,7 @@ const App = () => {
 
   useEffect(() => {
     const storageCity = JSON.parse(localStorage?.getItem("city"));
-console.log(city);
+
     if (storageCity && storageCity !== undefined) {
       fetchWeather(storageCity);
     }
@@ -27,7 +27,6 @@ console.log(city);
   }, []);
 
   useEffect(() => {
-    
     let newBg;
 
     if (weatherData?.weather) {
@@ -59,8 +58,10 @@ console.log(city);
       const cacheParsed = JSON.parse(cacheWeather);
       if (nowTime - cacheParsed.timestamp < cacheTime) {
         setWeatherData(cacheParsed.data);
-        console.log(city);
-        localStorage.setItem("city", JSON.stringify(cacheParsed.data.name || ''));
+        localStorage.setItem(
+          "city",
+          JSON.stringify(cacheParsed.data.name || "")
+        );
         setCity("");
 
         return;
@@ -77,7 +78,7 @@ console.log(city);
         console.log(city);
         localStorage.setItem(key, JSON.stringify({ data, timestamp: nowTime }));
 
-        localStorage.setItem("city", JSON.stringify(queryCity || ''));
+        localStorage.setItem("city", JSON.stringify(queryCity || ""));
 
         setCity("");
       }
@@ -89,7 +90,7 @@ console.log(city);
 
   return (
     <div className="flex flex-col px-4 mt-10 mb-10 md:px-8 lg:px-16 xl:px-32 2xl:px-64 relative ">
-      <div className="flex items-center justify-around z-100">
+      <header className="flex items-center justify-around z-100">
         <h1 className="text-5xl font-bold bg-gradient-to-r from-black to-[#ffffff85] bg-clip-text text-transparent">
           Weather
         </h1>
@@ -118,7 +119,7 @@ console.log(city);
             />
           </button>
         </div>
-      </div>
+      </header>
       {error && (
         <div className="mt-[150px] text-[50px] font-normal text-gray-500 mx-auto">
           {error.charAt(0).toUpperCase() + error.slice(1)}
