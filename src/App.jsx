@@ -92,7 +92,7 @@ const App = () => {
     <div className="flex flex-col px-4 mt-10 mb-10 md:px-8 lg:px-16 xl:px-32 2xl:px-64 relative ">
       <header className="flex items-center justify-around z-100">
         <h1 className="text-5xl font-bold bg-gradient-to-r from-black to-[#ffffff85] bg-clip-text text-transparent">
-          W   eather
+          Weather
         </h1>
         <div className="flex gap-1">
           <input
