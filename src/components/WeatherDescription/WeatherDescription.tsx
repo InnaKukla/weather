@@ -29,13 +29,13 @@ const WeatherDescription: React.FC<WeatherDataProps> = ({ weatherData }) => {
 
       <div className="xl:flex xl:gap-20 xl:items-start">
         <div className="flex justify-between items-center gap-[35px] md:gap-[60px] lg:gap-[70px] xl:flex-col xl:gap-0 xl:flex xl:flex-1">
-          <div className="mt-10 flex flex-col xl:flex-row gap-2 border-indigo-200 p-[16px] border border-solid rounded-2xl border-[#3f718b94] bg-[#3f718b94] ">
+          <div className="mt-10 flex flex-col xl:flex-row gap-2 p-[16px] border border-solid rounded-2xl border-[#3f718b94] bg-[#3f718b94] ">
             <p className="text-white font-semibold text-xl">Вологість</p>
             <p className="text-white font-semibold text-xl">
               {main?.humidity}%
             </p>
           </div>
-          <div className="mt-10 flex flex-col xl:flex-row gap-2 xl:mt-3 border-indigo-200 p-[16px] border border-solid rounded-2xl border-[#3f718b94] bg-[#3f718b94]">
+          <div className="mt-10 flex flex-col xl:flex-row gap-2 xl:mt-3 p-[16px] border border-solid rounded-2xl border-[#3f718b94] bg-[#3f718b94]">
             <p className="text-white font-semibold text-xl">Видимість</p>
             <p className="text-white font-semibold text-xl">
               {visibility / 1000}км
