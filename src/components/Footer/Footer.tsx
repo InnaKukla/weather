@@ -3,30 +3,30 @@ import React from "react";
 const Footer = () => {
     return (
         <footer className="flex flex-col md:flex-row gap-5 border-t border-solid border-[#0000003b] justify-between items-center mt-11 pt-6">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="flex flex-col md:flex-row justify-between items-baseline gap-4">
                 <a href="/">
-                    <h1 className="text-5xl font-bold bg-gradient-to-r from-black to-[#ffffff85] bg-clip-text text-transparent">
+                    <h1 className="text-3xl font-bold bg-gradient-to-r from-black to-[#ffffff85] bg-clip-text text-transparent">
                         Weather
                     </h1>
                 </a>
-                <p className="text-[14px]">© 2025</p>
+                <p className="text-[14px] text-[#000000a8]">© 2025</p>
             </div>
             <div className="flex items-center gap-4">
                 <a
                     href="/"
-                    className="text-[14px] cursor-pointer text-black hover:text-[#6d6a6a]"
+                    className="text-[14px] cursor-pointer text-[#000000a8] hover:text-[16px] hover:text-[#6d6a6a]"
                 >
                     Політика конфіденційності
                 </a>
                 <a
                     href="/"
-                    className="text-[14px] cursor-pointer text-black hover:text-[#6d6a6a]"
+                    className="text-[14px] cursor-pointer text-[#000000a8] hover:text-[16px] hover:text-[#6d6a6a]"
                 >
                     Угода користувача
                 </a>
                 <a
                     href="/"
-                    className="text-[14px] cursor-pointer text-black hover:text-[#6d6a6a]"
+                    className="text-[14px] cursor-pointer text-[#000000a8] hover:text-[16px] hover:text-[#6d6a6a]"
                 >
                     Контакти
                 </a>
