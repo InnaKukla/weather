@@ -1,6 +1,6 @@
-import React, { Suspense } from "react";
-import HomePage from "./pages/HomePage/HomePage";
+import React, { Suspense, lazy } from "react";
 import Loader from "./shared/Loader/Loader";
+const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
 
 const App: React.FC = () => {
   return (
