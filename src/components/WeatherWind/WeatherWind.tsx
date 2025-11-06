@@ -1,5 +1,5 @@
 import React from "react";
-import { WeatherDataType } from "../../shared/fetchWeather";
+import { WeatherDataType } from "../../shared/interfaces";
 
 interface WeatherWindProps {
     weatherData: WeatherDataType | null;

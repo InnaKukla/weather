@@ -1,15 +1,11 @@
 import React from "react";
-import { WeatherDataType } from "../../shared/fetchWeather";
+import { HeroProps } from "../../shared/interfaces";
 
-interface HeroProps {
-    weatherData?: WeatherDataType | null
-}
+
 
 const Hero: React.FC<HeroProps> = ({ weatherData }) => {
-    if (!weatherData) return null;
+    if (weatherData?.cod === "404" || !weatherData) return null;
     const { name, main, weather } = weatherData;
-    console.log(weatherData);
-
 
     return (
         <div className={`flex flex-col items-center`}>

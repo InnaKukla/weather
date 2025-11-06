@@ -1,24 +1,13 @@
 import React from "react";
-import { WeatherDataType } from "../../shared/fetchWeather";
 import WeatherWind from "../WeatherWind/WeatherWind";
+import { WeatherDataProps } from "../../shared/interfaces";
 
-interface WeatherDataProps {
-  weatherData: WeatherDataType | null;
-}
 
-// const directionsArray = [
-//   "Пн",
-//   "Пн-Сх",
-//   "Сх",
-//   "Пд-Сх",
-//   "Пд",
-//   "Пд-Зх",
-//   "Зх",
-//   "Пн-Зх",
-// ];
+
 
 const WeatherDescription: React.FC<WeatherDataProps> = ({ weatherData }) => {
-  if (weatherData?.cod === 404 || !weatherData) return null;
+
+  if (weatherData?.cod === '404' || !weatherData) return null;
 
   const { main, sys, visibility } = weatherData;
   const sunrise = sys?.sunrise;
@@ -26,7 +15,6 @@ const WeatherDescription: React.FC<WeatherDataProps> = ({ weatherData }) => {
   const sunriseDate = new Date((sunrise ?? 0) * 1000);
   const sunsetDate = new Date((sunset ?? 0) * 1000);
 
-  // const direction = directionsArray[Math.round(wind?.deg / 45) % 8];
 
   return (
     <div className={`flex flex-col items-center`}>
@@ -50,7 +38,6 @@ const WeatherDescription: React.FC<WeatherDataProps> = ({ weatherData }) => {
           <div className="mt-10 flex flex-col xl:flex-row gap-2 xl:mt-3 border-indigo-200 p-[16px] border border-solid rounded-2xl border-[#3f718b94] bg-[#3f718b94]">
             <p className="text-white font-semibold text-xl">Видимість</p>
             <p className="text-white font-semibold text-xl">
-              {" "}
               {visibility / 1000}км
             </p>
           </div>

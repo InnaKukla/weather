@@ -1,4 +1,4 @@
-import { WeatherDataType } from "./fetchWeather";
+import { WeatherDataType } from "./interfaces";
 
 const bgType: Record<string, string> = {
   Clouds: `${process.env.PUBLIC_URL}/images/cloudy2.jpg`,
