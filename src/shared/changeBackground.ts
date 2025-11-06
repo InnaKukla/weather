@@ -1,11 +1,11 @@
 import { WeatherDataType } from "./fetchWeather";
 
 const bgType: Record<string, string> = {
-  Clouds: "/images/cloudy2.jpg",
-  Rain: "/images/rain.webp",
-  Clear: "/images/clear.jpg",
-  Snow: "/images/snow.jpg",
-  Default: "/images/default.png",
+  Clouds: `${process.env.PUBLIC_URL}/images/cloudy2.jpg`,
+  Rain: `${process.env.PUBLIC_URL}/images/rain.webp`,
+  Clear: `${process.env.PUBLIC_URL}/images/clear.jpg`, 
+  Snow: `${process.env.PUBLIC_URL}/images/snow.jpg`,
+  Default: `${process.env.PUBLIC_URL}/images/default.png`,
 };
 
 export const changeBackground = ( weatherData: WeatherDataType ) => {
