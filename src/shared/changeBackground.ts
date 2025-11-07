@@ -20,7 +20,7 @@ export const changeBackground = (weatherData: WeatherDataType | null) => {
   img.src = newBg;
 
   img.onload = () => {
-    document.body.style.transition = "background-image 1s easy-in-out";
+    document.body.style.transition = "background 0.5s ease, opacity 0.5s ease";
     document.body.style.backgroundImage = `url(${newBg})`;
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundRepeat = "no-repeat";

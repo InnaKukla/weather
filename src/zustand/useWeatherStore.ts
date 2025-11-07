@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { persist } from "zustand/middleware";
+import { createJSONStorage, persist } from "zustand/middleware";
 import { WeatherDataType, WeatherState } from "../shared/interfaces";
 import { changeBackground } from "../shared/changeBackground";
 
@@ -77,6 +77,16 @@ export const useWeatherStore = create<WeatherState>()(
         }
       },
     }),
-    { name: "weather-storage" }
+    {
+      name: "weather-storage",
+      storage: createJSONStorage(() => localStorage),
+      onRehydrateStorage: () => (state) => {
+        // 👉 після відновлення стану викликаємо changeBackground
+        const current = state?.currentWeather;
+        if (current) {
+          changeBackground(current);
+        }
+      }
+     }
   )
 );
