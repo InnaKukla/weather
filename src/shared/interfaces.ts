@@ -11,23 +11,23 @@ export interface WeatherDataType {
 }
 
 export interface HeaderProps {
-    fetchWeatherFunc: (city: string) => void;
+  fetchWeatherFunc: (city: string) => void;
 }
 
 export interface HeroProps {
-    weatherData?: WeatherDataType | null;
-    loading: boolean;
-    error: string;
+  weatherData?: WeatherDataType | null;
+  loading: boolean;
+  error: string;
 }
 
 export interface CachedWeather {
-    data: WeatherDataType;
-    timestamp: number
+  data: WeatherDataType;
+  timestamp: number;
 }
 export interface WeatherState {
   weatherData: Record<string, CachedWeather>;
-    lastCity: string;
-    currentWeather: WeatherDataType | null;
+  lastCity: string;
+  currentWeather: WeatherDataType | null;
   error: string;
   loading: boolean;
   fetchWeather: (city: string) => Promise<void>;

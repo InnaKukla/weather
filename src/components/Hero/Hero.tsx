@@ -4,6 +4,7 @@ import { HeroProps } from "../../shared/interfaces";
 
 
 const Hero: React.FC<HeroProps> = ({ weatherData }) => {
+
     if (weatherData?.cod === "404" || !weatherData) return null;
     const { name, main, weather } = weatherData;
 

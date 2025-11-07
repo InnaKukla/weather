@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
     return (
-        <footer className="flex flex-col md:flex-row gap-5 border-t border-solid border-[#0000003b] justify-between items-center mt-11 pt-6">
+        <footer className="flex flex-col  md:flex-row gap-5 border-t border-solid border-[#0000003b] justify-between items-center mt-auto pt-6 mb-10 ">
             <div className="flex flex-col  md:flex-row justify-between items-center md:items-baseline gap-4">
                 <a href="/">
                     <h1 className="text-3xl font-bold bg-gradient-to-r from-black to-[#ffffff85] bg-clip-text text-transparent">
