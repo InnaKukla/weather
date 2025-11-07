@@ -18,7 +18,7 @@ const Header: React.FC<HeaderProps> = ({ fetchWeatherFunc }) => {
     };
     return (
         <header className="flex flex-col sm:flex-row gap-3 items-center justify-between z-100  mt-10 ">
-            <a href="/">
+            <a href="/weather">
                 <h1 className="text-5xl hover:text-[52px] font-bold bg-gradient-to-r from-black to-[#ffffff85] bg-clip-text text-transparent cursor-pointer">
                     Weather
                 </h1>
@@ -32,7 +32,7 @@ const Header: React.FC<HeaderProps> = ({ fetchWeatherFunc }) => {
                     onKeyDown={handleKeyDown}
                     placeholder="Назва населеного пункту, країни чи регіону"
                     autoComplete="off"
-                    className="w-[200px] ring-1 ring-gray-300 rounded-md sm:w-[450px] lg:w-[600px] p-2 outline-gray-300 bg-color-[#fff] text-[#75777a]"
+                    className="w-[300px] ring-1 ring-gray-300 rounded-md sm:w-[450px] lg:w-[600px] p-2 outline-gray-300 bg-color-[#fff] text-[#75777a]"
                 />
                 <button
                     onClick={handleSearch}
